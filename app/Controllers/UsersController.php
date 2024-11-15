@@ -2,14 +2,12 @@
 
 namespace App\Controllers;
 
-use App\Models\User;
-
 class UsersController
 {
     public function index()
     {
-        $users = (new User())->getAll();
         require __DIR__ . "/../views/users/index.php";
+        $users = (new User())->getAll();
     }
 
     public function create()
@@ -19,7 +17,7 @@ class UsersController
 
     public function store()
     {
-        $values = $_POST;
+        $values = $_GET;
         (new User())->create($values);
 
         header("Location: /users");

@@ -15,7 +15,7 @@ abstract class Model
         $this->db = new PDO(getenv('DB_DSN'), getenv('DB_USER'), getenv('DB_PASSWORD'));
     }
 
-    public function getAll()
+    protected function getAll()
     {
         $table = str_replace("app\models\\", "", strtolower(static::class)) . 's';
 
@@ -59,10 +59,10 @@ abstract class Model
         $sql .= ' VALUES(:firstname, :lastname, :email, :city, :canton, :zip);';
 
         $this->db->prepare($sql)->execute($values);
-        $this->set_values($values);
+        $this->setValues($values);
     }
 
-    private function set_values(array $values)
+    private function setValues(array $values)
     {
         foreach ($values as $key => $value) {
             $this->$key = $value;

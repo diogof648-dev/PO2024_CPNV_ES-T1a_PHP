@@ -16,6 +16,6 @@ class User extends Model
     {
         $this->columns = ["firstname", "lastname", "email", "city", "canton", "zip"];
 
-        parent::__construct();
+        parent->__construct();
     }
 }
