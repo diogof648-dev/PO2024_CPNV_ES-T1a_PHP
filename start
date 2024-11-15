@@ -1,0 +1,5 @@
+export DB_DSN="mysql:host=127.0.0.1;port=3306;dbname=YOUR_DB_NAME"
+export DB_USER="YOUR_USER"
+export DB_PASSWORD="YOUR_PASSWORD"
+
+php -S localhost:8080 -t public/
