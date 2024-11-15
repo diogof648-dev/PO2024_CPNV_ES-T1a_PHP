@@ -1,0 +1,90 @@
+.form-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 23px;
+  }
+  
+  .form-col {
+    width: 100%;
+    padding: 0 12px;
+    margin-bottom: 23px;
+  }
+  
+  .form-col-full {
+    width: 100%;
+    padding: 0 12px;
+  }
+  
+  @media (min-width: 768px) {
+    .form-col {
+      width: 50%;
+    }
+    .form-col:nth-child(3) {
+      width: 33.33%;
+    }
+  }
+  
+  label {
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: #4a5568; 
+    margin-bottom: 12px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    background-color: #edf2f7; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 5px;
+    color: #4a5568; 
+    transition: background-color 0.3s, border-color 0.3s;
+  }
+  
+  input:focus {
+    background-color: #ffffff;
+    border-color: #a0aec0; 
+    outline: none;
+  }
+  
+  .error-message {
+    color: #f56565; 
+    font-size: 12px;
+  }
+  
+  .select-wrapper {
+    position: relative;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #edf2f7; 
+    border: 1px solid #e2e8f0; 
+    border-radius: 0.25rem;
+    appearance: none;
+    color: #4a5568; 
+  }
+  
+  .select-arrow {
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  
+  .select-arrow svg {
+    fill: #4a5568; 
+    width: 20px;
+    height: 20px;
+  }
+  
